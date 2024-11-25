@@ -65,7 +65,7 @@ class ChatGroupController {
   static async destroy(req: Request, res: Response) {
     try {
       
-      const {id} = req.params;
+      const {id} = await req.params;
       
       const mygroup = await prisma.chatGroroup.delete({
         where: {
